@@ -2,12 +2,14 @@ package br.com.notelab.backend.Model;
 
 public class Caderno {
     private Long id;
+    private Long userId;
     private String name;
     private String description;
     private String matter;
 
-    public Caderno(Long id, String name, String description, String matter) {
+    public Caderno(Long id, Long userId, String name, String description, String matter) {
         this.id = id;
+        this.userId = userId;
         this.name = name;
         this.description = description;
         this.matter = matter;
@@ -17,8 +19,16 @@ public class Caderno {
         return id;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getName() {
